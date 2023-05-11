@@ -1,0 +1,24 @@
+explicitly allowed functions:
+- open
+- close
+- read
+- write
+- malloc
+- free
+- getpass / readpassphrase / getch
+
+- strerror
+- exit
+
+
+clib TODO:
+- strcmp
+- strcmp_ignore_case
+
+
+miller rabin for primality test
+
+need md5 and des from previous projects
+
+for genrsa presumably "-i" == "-rand" for seeding from a file
+and "-o" == "-out" for output file
