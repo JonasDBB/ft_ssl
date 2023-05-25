@@ -16,7 +16,7 @@ uint64_t get_random_uint64() {
         // TODO: exit gracefully
         return 0;
     }
-    if (read(devrandom, &ret, 8) != 8) {
+    if (read(devrandom, &ret, 7) != 7) {
         close(devrandom);
         ERROR("failed reading 8 random bytes. errno is %s", errno_name(errno));
         // TODO: exit gracefully
