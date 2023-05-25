@@ -6,6 +6,7 @@
 #define FT_SSL_FT_SSL_H
 
 #include <stdbool.h>
+#include <stdint.h>
 
 typedef enum {
     GENRSA,
@@ -14,6 +15,7 @@ typedef enum {
     UNKNOWN
 } command;
 
-float prime_probability(unsigned long int n);
+uint64_t get_random_uint64();
+bool miller_rabin_is_prime(uint64_t potential_prime);
 
 #endif //FT_SSL_FT_SSL_H
