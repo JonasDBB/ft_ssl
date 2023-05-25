@@ -18,7 +18,7 @@ clib TODO:
 
 miller rabin for primality test
 
-need md5 and des from previous projects
+need md5 and des from previous projects (Nicolas will probably remove this)
 
 for genrsa presumably "-i" == "-rand" for seeding from a file
 and "-o" == "-out" for output file

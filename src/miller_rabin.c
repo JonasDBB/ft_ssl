@@ -4,6 +4,7 @@
 
 #include <stdbool.h>
 #include <unistd.h>
+#include <stdio.h>
 #include "ft_ssl.h"
 
 #define MILLER_RABIN_PRECISION 5
@@ -75,7 +76,7 @@ bool miller_rabin_is_prime(uint64_t potential_prime) {
         if (!check(potential_prime, odd_nr)) {
             return false;
         }
-        write(1, "+", 1);
+        printf("+");
     }
     return true;
 }
