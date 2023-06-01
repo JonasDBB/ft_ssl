@@ -67,7 +67,6 @@ void genrsa() {
     uint64_t e = 65537;
 
     // decryption key part
-//    d === e^-1, d is modular multiplicative inverse of e modulo lambda_n
     int64_t d = modular_multiplicative_inverse((int64_t)e, (int64_t)lambda_n);
     LOG("d   %llu", d);
 }

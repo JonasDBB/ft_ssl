@@ -18,7 +18,11 @@ command get_command(const char* str) {
 }
 
 int main(int ac, char** av) {
-    (void)ac;
+    if (ac < 2) {
+        // TODO: make correct error
+        fprintf(stderr, "need arguments");
+        return 1;
+    }
     command cmd = get_command(av[1]);
     if (cmd == UNKNOWN) {
         fprintf(stderr, "ft_ssl: Error: '%s' is an invalid command.\n", av[0]);
