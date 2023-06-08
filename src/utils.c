@@ -5,7 +5,6 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <errno.h>
-#include <stdio.h>
 #include "ft_clib.h"
 
 uint64_t get_random_uint64() {
@@ -16,7 +15,7 @@ uint64_t get_random_uint64() {
         // TODO: exit gracefully
         return 0;
     }
-    if (read(devrandom, &ret, 7) != 7) {
+    if (read(devrandom, &ret, sizeof(uint64_t)) != sizeof(uint64_t)) {
         close(devrandom);
         ERROR("failed reading 8 random bytes. errno is %s", errno_name(errno));
         // TODO: exit gracefully
