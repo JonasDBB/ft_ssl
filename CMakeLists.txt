@@ -7,7 +7,7 @@ include(FetchContent)
 FetchContent_Declare(
 		ft_clib
 		GIT_REPOSITORY https://github.com/JonasDBB/ft_clib.git
-		GIT_TAG v1.0
+		GIT_TAG v1.3
 )
 FetchContent_MakeAvailable(ft_clib)
 
@@ -29,4 +29,4 @@ target_link_options(ft_ssl PUBLIC
 		-fsanitize=address
 		)
 
-target_link_libraries(ft_ssl ft_clib)
+target_link_libraries(ft_ssl ft_clib ft_printf)

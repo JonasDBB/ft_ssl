@@ -2,21 +2,21 @@
 // Created by Jonas Bennink bolt on 5/25/23.
 //
 
-#include <stdio.h>
 #include "ft_ssl.h"
 #include "ft_clib.h"
+#include "ft_printf.h"
 
 static uint32_t get_prime() {
     uint32_t ret;
     while (1) {
         ret = get_random_uint64();
-        printf(".");
+        ft_printf(".");
         if (miller_rabin_is_prime(ret) == false) {
             continue;
         }
         break;
     }
-    printf("\n");
+    ft_printf("\n");
     return ret;
 }
 
