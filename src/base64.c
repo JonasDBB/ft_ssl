@@ -1,7 +1,3 @@
-//
-// Created by Jonas Bennink bolt on 6/2/23.
-//
-
 // https://nachtimwald.com/2017/11/18/base64-encode-and-decode-in-c/
 
 #include <stdlib.h>

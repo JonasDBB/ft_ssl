@@ -1,22 +1,8 @@
-//
-// Created by Jonas Bennink bolt on 5/11/23.
-//
-
 #include <stdio.h>
 #include "ft_printf.h"
 #include "ft_ssl.h"
-#include "ft_clib.h"
+#include "args.h"
 
-command get_command(const char* str) {
-    if (ft_strcmp(str, "genrsa") == 0) {
-        return GENRSA;
-    } else if (ft_strcmp(str, "rsa") == 0) {
-        return RSA;
-    } else if (ft_strcmp(str, "rsautl") == 0) {
-        return RSAUTL;
-    }
-    return UNKNOWN;
-}
 
 int main(int ac, char** av) {
     if (ac < 2) {
@@ -31,6 +17,16 @@ int main(int ac, char** av) {
     }
     if (cmd == GENRSA) {
         genrsa();
+    } else if (cmd == RSA) {
+        args args = get_flags(ac, av);
+        if (args.error == true) {
+            ft_fprintf(stderr, "rs: Use -help for summary.\n");
+            return 1;
+        }
+        if (args.help == true) {
+            print_help();
+            return 0;
+        }
     } else {
         ft_fprintf(stderr, "not implemented yet\n");
     }

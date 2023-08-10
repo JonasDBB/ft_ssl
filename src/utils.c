@@ -1,7 +1,3 @@
-//
-// Created by Jonas Bennink bolt on 5/25/23.
-//
-
 #include <unistd.h>
 #include <fcntl.h>
 #include <errno.h>

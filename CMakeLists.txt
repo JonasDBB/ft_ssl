@@ -29,4 +29,4 @@ target_link_options(ft_ssl PUBLIC
 		-fsanitize=address
 		)
 
-target_link_libraries(ft_ssl ft_clib ft_printf)
+target_link_libraries(ft_ssl ft_clib ft_printf ft_list)

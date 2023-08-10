@@ -1,7 +1,3 @@
-//
-// Created by Jonas Bennink bolt on 5/25/23.
-//
-
 #include "ft_ssl.h"
 #include "ft_clib.h"
 #include "ft_printf.h"

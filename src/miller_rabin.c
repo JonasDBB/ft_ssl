@@ -1,7 +1,3 @@
-//
-// Created by Jonas Bennink bolt on 5/11/23.
-//
-
 #include <stdbool.h>
 #include "ft_ssl.h"
 #include "ft_printf.h"
