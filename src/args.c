@@ -114,11 +114,30 @@ command get_command(const char* str) {
         return RSA;
     } else if (ft_strcmp(str, "rsautl") == 0) {
         return RSAUTL;
+    } else if (ft_strcmp(str, "-help") == 0 || ft_strcmp(str, "help") == 0) {
+        return HELP;
     }
     return UNKNOWN;
 }
 
 void print_help() {
+    const char* helpstr =
+            "Standard commands\n"
+            "genrsa\n"
+            "rsa\n"
+            "rsautl (does nothing yet)\n"
+            "\n"
+            "Message Digest commands\n"
+            "[nothing here :)]\n"
+            "\n"
+            "Cipher commands\n"
+            "base64\n"
+            "des (probably not fully implemented\n"
+            ;
+    ft_fprintf(stderr, helpstr);
+}
+
+void print_rsa_help() {
     const char* helpstr =
             "Usage: rsa [options]\n"
             "\n"

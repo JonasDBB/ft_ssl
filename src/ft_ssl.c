@@ -12,8 +12,11 @@ int main(int ac, char** av) {
     }
     command cmd = get_command(av[1]);
     if (cmd == UNKNOWN) {
-        ft_fprintf(stderr, "ft_ssl: Error: '%s' is an invalid command.\n", av[0]);
+        ft_fprintf(stderr, "ft_ssl: Error: '%s' is an invalid command.\n", av[1]);
         return 0;
+    }
+    if (cmd == HELP) {
+
     }
     if (cmd == GENRSA) {
         genrsa();
@@ -24,7 +27,7 @@ int main(int ac, char** av) {
             return 1;
         }
         if (args.help == true) {
-            print_help();
+            print_rsa_help();
             return 0;
         }
     } else {

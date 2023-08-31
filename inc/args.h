@@ -7,6 +7,7 @@ typedef enum {
     GENRSA,
     RSA,
     RSAUTL,
+    HELP,
     UNKNOWN
 } command;
 
@@ -47,6 +48,6 @@ typedef struct {
 
 command get_command(const char* str);
 args get_flags(int ac, char** av);
-void print_help();
+void print_rsa_help();
 
 #endif
